@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1080">
+<title>Template 3 — Programme du Jour CTRV (Page 1)</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@400;500;600;700;800;900&family=Barlow+Condensed:wght@600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    width: 1080px;
+    height: 1920px;
+    overflow: hidden;
+    font-family: 'Barlow', sans-serif;
+    background: #f0f0e8;
+  }
+
+  .story {
+    width: 1080px;
+    height: 1920px;
+    background: #f0f0e8;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  /* Header block */
+  .header-block {
+    background: #184f71;
+    padding: 72px 80px 56px;
+    position: relative;
+    flex-shrink: 0;
+    overflow: hidden;
+  }
+
+  .header-deco {
+    position: absolute;
+    right: -80px; bottom: -100px;
+    width: 340px; height: 340px;
+    border-radius: 50%;
+    border: 2px solid rgba(209,219,94,0.1);
+  }
+  .header-deco-2 {
+    position: absolute;
+    right: 60px; top: -60px;
+    width: 200px; height: 200px;
+    border-radius: 50%;
+    background: rgba(209,219,94,0.04);
+  }
+
+  .header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 32px;
+    position: relative; z-index: 2;
+  }
+
+  .super-label {
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: #d1db5e;
+    opacity: 0.8;
+    margin-bottom: 10px;
+  }
+
+  .main-title {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 100px;
+    font-weight: 900;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    line-height: 0.88;
+  }
+
+ .logo-zone { width: 300px; height: 300px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+  .logo-zone img { max-width: 100%; max-height: 100%; object-fit: contain; transform: scale(2.5); }
+
+  /* Date stripe */
+  .date-stripe {
+    background: #d1db5e;
+    padding: 20px 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-shrink: 0;
+  }
+
+  .date-stripe-day {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 42px;
+    font-weight: 900;
+    color: #0d2e42;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+
+  /* Court section */
+  .court-section {
+    padding: 36px 80px 0;
+    flex-shrink: 0;
+  }
+
+  .court-section-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .court-icon {
+    width: 40px; height: 40px;
+    border-radius: 8px;
+    background: rgba(24,79,113,0.1);
+    display: flex; align-items: center; justify-content: center;
+  }
+
+  .court-section-title {
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: #184f71;
+    opacity: 0.45;
+  }
+
+  .court-section-line {
+    flex: 1;
+    height: 1px;
+    background: rgba(24,79,113,0.1);
+  }
+
+  /* Matches list */
+  .matches-list {
+    flex: 1;
+    padding: 24px 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    overflow: hidden;
+  }
+
+  .match-card {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 24px 32px;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    border: 1px solid rgba(24,79,113,0.07);
+    position: relative;
+  }
+
+  .match-time-block {
+    min-width: 100px;
+    text-align: center;
+  }
+
+  .match-time {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 44px;
+    font-weight: 900;
+    color: #184f71;
+    letter-spacing: 1px;
+    line-height: 0.9;
+  }
+
+  .match-ampm {
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: rgba(24,79,113,0.4);
+  }
+
+  .match-sep {
+    width: 1px;
+    height: 64px;
+    background: rgba(24,79,113,0.1);
+    flex-shrink: 0;
+  }
+
+  .match-players {
+    flex: 1;
+  }
+
+  .match-p1-block, .match-p1-block {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  /* NOUVELLE CLASSE POUR METTRE EN VALEUR LE JOUEUR DU CLUB */
+  .highlight-club {
+    border: 3px solid #d1db5e;
+    border-radius: 8px;
+    padding: 8px 12px;
+    margin-left: -12px; /* Garde l'alignement du texte avec le reste */
+    background-color: rgba(209, 219, 94, 0.08);
+  }
+
+  .match-p1 {
+    font-size: 26px;
+    font-weight: 800;
+    color: #1a1a1a;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    line-height: 1.1;
+    display: flex;
+    align-items: center;
+  }
+  .player-rank {
+    font-size: 16px;
+    font-weight: 700;
+    color: #184f71;
+    background: rgba(24,79,113,0.08);
+    padding: 2px 8px;
+    border-radius: 4px;
+    margin-left: 12px;
+  }
+
+  .player-club {
+    font-size: 15px;
+    font-weight: 500;
+    color: rgba(24,79,113,0.6);
+    text-transform: uppercase;
+  }
+
+  .match-vs-label {
+    font-size: 14px;
+    font-weight: 600;
+    color: rgba(0,0,0,0.2);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin: 6px 0;
+  }
+
+  .match-meta {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 8px;
+  }
+
+  .court-tag {
+    font-size: 18px;
+    font-weight: 800;
+    color: #184f71;
+    background: rgba(24,79,113,0.08);
+    padding: 6px 16px;
+    border-radius: 6px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  .round-tag-small {
+    font-size: 14px;
+    font-weight: 600;
+    color: rgba(24,79,113,0.4);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  /* Footer */
+  .footer {
+    background: #0d2e42;
+    padding: 28px 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-shrink: 0;
+  }
+
+  .footer-note {
+    font-size: 18px;
+    font-weight: 500;
+    color: rgba(255,255,255,0.25);
+    letter-spacing: 1px;
+    font-style: italic;
+  }
+
+  .footer-hashtag {
+    font-size: 20px;
+    font-weight: 700;
+    color: #d1db5e;
+    letter-spacing: 1px;
+  }
+</style>
+</head>
+<body>
+<div class="story">
+
+  <div class="header-block">
+    <div class="header-deco"></div>
+    <div class="header-deco-2"></div>
+    <div class="header-top">
+      <div class="header-titles">
+        <div class="super-label">Tournoi open du CTRV</div>
+        <div class="main-title">Programme<br>du jour</div>
+      </div>
+      <div class="logo-zone">
+        <img src="logoctrv.png" alt="Logo CTRV">
+      </div>
+    </div>
+  </div>
+
+  <div class="date-stripe">
+    <div class="date-stripe-day">Dimanche 29 mars 2026</div>
+  </div>
+
+  <div class="court-section">
+    <div class="court-section-header">
+      <div class="court-icon">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+          <rect x="2" y="2" width="16" height="16" stroke="#184f71" stroke-width="1.5" rx="1"/>
+          <line x1="10" y1="2" x2="10" y2="18" stroke="#184f71" stroke-width="1"/>
+          <line x1="2" y1="10" x2="18" y2="10" stroke="#184f71" stroke-width="1"/>
+        </svg>
+      </div>
+      <div class="court-section-title">Matchs du jour (1/4)</div>
+      <div class="court-section-line"></div>
+    </div>
+  </div>
+
+  <div class="matches-list">
+
+    <div class="match-card">
+      <div class="match-time-block">
+        <div class="match-time">09h</div>
+        <div class="match-ampm">00</div>
+      </div>
+      <div class="match-sep"></div>
+      <div class="match-players">
+        <div class="match-p1-block">
+          <div class="match-p1">Saury A. <span class="player-rank">30</span></div>
+          <div class="player-club">Tac Tennis</div>
+        </div>
+        <div class="match-vs-label">vs</div>
+        <div class="match-p1-block">
+          <div class="match-p1">Couturier C. <span class="player-rank">15/5</span></div>
+          <div class="player-club">Montfermeil Tennis 93</div>
+        </div>
+      </div>
+      <div class="match-meta">
+        <div class="court-tag">Court 1</div>
+        <div class="round-tag-small">SM Senior</div>
+      </div>
+    </div>
+
+    <div class="match-card">
+      <div class="match-time-block">
+        <div class="match-time">09h</div>
+        <div class="match-ampm">00</div>
+      </div>
+      <div class="match-sep"></div>
+      <div class="match-players">
+        <div class="match-p1-block highlight-club">
+          <div class="match-p1">Tiah S. <span class="player-rank">30</span></div>
+          <div class="player-club">CT Rose des Vents</div>
+        </div>
+        <div class="match-vs-label">vs</div>
+        <div class="match-p1-block">
+          <div class="match-p1">Souchet R. <span class="player-rank">15/5</span></div>
+          <div class="player-club">TC Les Lilas</div>
+        </div>
+      </div>
+      <div class="match-meta">
+        <div class="court-tag">Court 2</div>
+        <div class="round-tag-small">SM Senior</div>
+      </div>
+    </div>
+
+    <div class="match-card">
+      <div class="match-time-block">
+        <div class="match-time">10h</div>
+        <div class="match-ampm">00</div>
+      </div>
+      <div class="match-sep"></div>
+      <div class="match-players">
+        <div class="match-p1-block">
+          <div class="match-p1">Reynaud P. <span class="player-rank">30</span></div>
+          <div class="player-club">CM Aubervilliers</div>
+        </div>
+        <div class="match-vs-label">vs</div>
+        <div class="match-p1-block">
+          <div class="match-p1">Chartier B. <span class="player-rank">15/4</span></div>
+          <div class="player-club">TC Pantin</div>
+        </div>
+      </div>
+      <div class="match-meta">
+        <div class="court-tag">Court 4</div>
+        <div class="round-tag-small">SM Senior</div>
+      </div>
+    </div>
+
+    <div class="match-card">
+      <div class="match-time-block">
+        <div class="match-time">10h</div>
+        <div class="match-ampm">30</div>
+      </div>
+      <div class="match-sep"></div>
+      <div class="match-players">
+        <div class="match-p1-block">
+          <div class="match-p1">Hilcu T. <span class="player-rank">30</span></div>
+          <div class="player-club">TC Comite de Paris</div>
+        </div>
+        <div class="match-vs-label">vs</div>
+        <div class="match-p1-block">
+          <div class="match-p1">Mathieu C. <span class="player-rank">15/5</span></div>
+          <div class="player-club">Tennis Club de Lutece</div>
+        </div>
+      </div>
+      <div class="match-meta">
+        <div class="court-tag">Court 1</div>
+        <div class="round-tag-small">SM Senior</div>
+      </div>
+    </div>
+
+    <div class="match-card">
+      <div class="match-time-block">
+        <div class="match-time">10h</div>
+        <div class="match-ampm">30</div>
+      </div>
+      <div class="match-sep"></div>
+      <div class="match-players">
+        <div class="match-p1-block">
+          <div class="match-p1">Goba A. <span class="player-rank">15/3</span></div>
+          <div class="player-club">AS Tennis de Montreuil</div>
+        </div>
+        <div class="match-vs-label">vs</div>
+        <div class="match-p1-block">
+          <div class="match-p1">Lafosse L. <span class="player-rank">15/2</span></div>
+          <div class="player-club">Claye Souilly TC</div>
+        </div>
+      </div>
+      <div class="match-meta">
+        <div class="court-tag">Court 2</div>
+        <div class="round-tag-small">SD Senior</div>
+      </div>
+    </div>
+
+    <div class="match-card">
+      <div class="match-time-block">
+        <div class="match-time">10h</div>
+        <div class="match-ampm">30</div>
+      </div>
+      <div class="match-sep"></div>
+      <div class="match-players">
+        <div class="match-p1-block">
+          <div class="match-p1">Aubril S. <span class="player-rank">30</span></div>
+          <div class="player-club">AS Gaziers de Paris</div>
+        </div>
+        <div class="match-vs-label">vs</div>
+        <div class="match-p1-block">
+          <div class="match-p1">Servant T. <span class="player-rank">15/5</span></div>
+          <div class="player-club">Blanc-Mesnil Sport Tennis</div>
+        </div>
+      </div>
+      <div class="match-meta">
+        <div class="court-tag">Court 3</div>
+        <div class="round-tag-small">SM Senior</div>
+      </div>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
