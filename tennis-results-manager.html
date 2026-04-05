@@ -10,8 +10,6 @@
 *{margin:0;padding:0;box-sizing:border-box}
 :root{--navy:#0d2e42;--lime:#d1db5e;--lime20:rgba(209,219,94,.20);--white:#fff;--dimmed:rgba(255,255,255,.40);--ui-bg:#08192a;--ui-card:#0f2337;--ui-border:rgba(209,219,94,.18);--ui-input:#0a1e30;--red:#ff5a5a}
 body{font-family:'Barlow',sans-serif;background:var(--ui-bg);color:var(--white);min-height:100vh;display:flex;flex-direction:column}
-
-/* TOPBAR */
 .topbar{background:rgba(0,0,0,.35);border-bottom:1px solid var(--ui-border);padding:12px 24px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;backdrop-filter:blur(12px);gap:16px}
 .topbar-brand{display:flex;align-items:center;gap:10px;flex-shrink:0}
 .topbar-logo{width:34px;height:34px;background:var(--lime);border-radius:8px;display:flex;align-items:center;justify-content:center}
@@ -21,27 +19,19 @@ body{font-family:'Barlow',sans-serif;background:var(--ui-bg);color:var(--white);
 .module-tab{padding:8px 20px;border-radius:7px;font-size:13px;font-weight:700;letter-spacing:1px;text-transform:uppercase;cursor:pointer;border:none;background:transparent;color:rgba(255,255,255,.4);transition:all .18s}
 .module-tab.active{background:var(--lime);color:var(--navy)}
 .topbar-actions{display:flex;gap:8px;flex-shrink:0}
-
-/* BUTTONS */
 .btn{font-family:'Barlow',sans-serif;font-size:13px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;border:none;border-radius:8px;padding:9px 18px;cursor:pointer;transition:all .18s;display:inline-flex;align-items:center;gap:6px;white-space:nowrap}
 .btn-lime{background:var(--lime);color:var(--navy)}.btn-lime:hover{background:#e0ea6a;transform:translateY(-1px)}
 .btn-ghost{background:transparent;border:1.5px solid rgba(255,255,255,.15);color:rgba(255,255,255,.7)}.btn-ghost:hover{border-color:var(--lime);color:var(--lime)}
 .btn-danger{background:rgba(255,90,90,.12);border:1px solid rgba(255,90,90,.3);color:var(--red)}.btn-danger:hover{background:rgba(255,90,90,.22)}
 .btn-sm{padding:6px 12px;font-size:11px}.btn-icon{padding:8px;border-radius:7px}
-
-/* LAYOUT */
 .main{display:grid;grid-template-columns:1fr 1fr;flex:1;height:calc(100vh - 61px)}
 .editor-panel{overflow-y:auto;border-right:1px solid var(--ui-border);padding:22px;display:flex;flex-direction:column;gap:16px}
 .editor-panel::-webkit-scrollbar{width:4px}
 .editor-panel::-webkit-scrollbar-thumb{background:var(--ui-border);border-radius:99px}
-
-/* SECTION CARDS */
 .section-card{background:var(--ui-card);border:1px solid var(--ui-border);border-radius:14px;overflow:hidden}
 .section-header{padding:12px 18px;background:rgba(209,219,94,.06);border-bottom:1px solid var(--ui-border);display:flex;align-items:center;justify-content:space-between}
 .section-label{font-size:10px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--lime)}
 .section-body{padding:18px}
-
-/* FORM */
 .field-row{display:grid;gap:10px;margin-bottom:12px}
 .field-row.cols-2{grid-template-columns:1fr 1fr}.field-row.cols-3{grid-template-columns:1fr 1fr 1fr}
 .field{display:flex;flex-direction:column;gap:4px}
@@ -55,8 +45,6 @@ select option{background:#0d2340}
 .toggle::after{content:'';position:absolute;width:16px;height:16px;background:var(--white);border-radius:50%;top:3px;left:3px;transition:transform .2s}
 .toggle.on::after{transform:translateX(18px)}
 .toggle-label{font-size:13px;color:var(--dimmed)}
-
-/* SCORE */
 .score-row{display:grid;grid-template-columns:1fr 46px 46px 46px;gap:7px;align-items:center;margin-bottom:8px}
 .score-row .player-label{font-size:12px;font-weight:600;color:var(--dimmed);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .score-input{background:var(--ui-input);border:1.5px solid rgba(255,255,255,.08);border-radius:7px;color:var(--white);font-family:'Barlow Condensed',sans-serif;font-size:20px;font-weight:800;text-align:center;padding:7px 3px;outline:none;transition:border-color .2s;width:100%}
@@ -67,8 +55,6 @@ select option{background:#0d2340}
 .winner-selector{display:flex;gap:7px;margin-bottom:12px}
 .winner-btn{flex:1;padding:8px;border-radius:8px;border:1.5px solid rgba(255,255,255,.08);background:transparent;color:var(--dimmed);font-family:'Barlow',sans-serif;font-size:12px;font-weight:600;cursor:pointer;text-align:center;transition:all .18s;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .winner-btn.active{background:var(--lime20);border-color:var(--lime);color:var(--lime)}
-
-/* MATCH LIST */
 .match-list{display:flex;flex-direction:column;gap:7px}
 .match-item{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);border-radius:10px;padding:11px 14px;display:flex;align-items:center;gap:10px;cursor:pointer;transition:all .18s}
 .match-item:hover,.match-item.active{background:rgba(209,219,94,.07);border-color:rgba(209,219,94,.25)}
@@ -77,8 +63,6 @@ select option{background:#0d2340}
 .match-item-tag{font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--lime);opacity:.6;margin-bottom:2px}
 .match-item-names{font-family:'Barlow Condensed',sans-serif;font-size:16px;font-weight:800;text-transform:uppercase;color:var(--white);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .match-item-actions{display:flex;gap:5px;flex-shrink:0}
-
-/* PREVIEW */
 .preview-panel{overflow:hidden;display:flex;flex-direction:column;background:#080f18}
 .preview-topbar{padding:10px 18px;border-bottom:1px solid var(--ui-border);display:flex;align-items:center;justify-content:space-between;flex-shrink:0}
 .preview-label{font-size:10px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,.3)}
@@ -86,19 +70,14 @@ select option{background:#0d2340}
 .preview-container{flex:1;overflow:auto;display:flex;align-items:flex-start;justify-content:center;padding:18px}
 .preview-wrapper{transform-origin:top center;transition:transform .3s ease}
 #preview-frame{width:1080px;height:1920px;border:none;border-radius:8px;box-shadow:0 0 60px rgba(0,0,0,.6)}
-
-/* MODAL */
 .modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.7);backdrop-filter:blur(8px);z-index:200;align-items:center;justify-content:center}
 .modal-overlay.open{display:flex}
 .modal{background:var(--ui-card);border:1px solid var(--ui-border);border-radius:18px;width:680px;max-width:96vw;max-height:90vh;overflow-y:auto;padding:28px}
 .modal-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:22px}
 .modal-title{font-family:'Barlow Condensed',sans-serif;font-size:26px;font-weight:800;text-transform:uppercase;letter-spacing:1px}
 .modal-title span{color:var(--lime)}
-
-/* TOAST */
 .toast{position:fixed;bottom:24px;right:24px;background:var(--lime);color:var(--navy);font-size:13px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:12px 22px;border-radius:10px;transform:translateY(80px);opacity:0;transition:all .3s cubic-bezier(.34,1.56,.64,1);z-index:300;display:flex;align-items:center;gap:7px}
 .toast.show{transform:translateY(0);opacity:1}
-
 .divider{height:1px;background:rgba(255,255,255,.07);margin:14px 0}
 .empty-state{text-align:center;padding:28px 16px;color:var(--dimmed)}
 .empty-state p{font-size:13px;margin-top:10px}
@@ -143,7 +122,6 @@ select option{background:#0d2340}
 <div class="main">
   <div class="editor-panel">
 
-    <!-- MODULE RÉSULTATS -->
     <div class="module-panel active" id="panel-resultats">
       <div class="section-card">
         <div class="section-header"><div class="section-label">Informations générales</div></div>
@@ -171,7 +149,6 @@ select option{background:#0d2340}
       </div>
     </div>
 
-    <!-- MODULE PROGRAMME -->
     <div class="module-panel" id="panel-programme">
       <div class="section-card">
         <div class="section-header"><div class="section-label">Informations générales</div></div>
@@ -198,18 +175,15 @@ select option{background:#0d2340}
       </div>
     </div>
 
-    <!-- AIDE -->
     <div class="section-card" style="border-color:rgba(255,255,255,.04)">
       <div class="section-body" style="font-size:12px;color:rgba(255,255,255,.28);line-height:1.8">
         <p>· Données <strong style="color:rgba(255,255,255,.5)">sauvegardées automatiquement</strong> dans le navigateur.</p>
-        <p>· Les onglets <strong style="color:rgba(255,255,255,.5)">Résultats</strong> et <strong style="color:rgba(255,255,255,.5)">Programme</strong> sont indépendants mais partagent le même fichier JSON.</p>
         <p>· <strong style="color:rgba(255,255,255,.5)">PNG</strong> exporte le visuel actif. <strong style="color:rgba(255,255,255,.5)">JSON</strong> sauvegarde les deux modules d'un coup.</p>
       </div>
     </div>
 
   </div>
 
-  <!-- PREVIEW -->
   <div class="preview-panel">
     <div class="preview-topbar">
       <div class="preview-label" id="previewLabel">Aperçu — Résultats</div>
@@ -329,42 +303,28 @@ select option{background:#0d2340}
 <input type="file" id="jsonImportInput" accept=".json" style="display:none" onchange="handleJSONImport(event)">
 
 <script>
-/* ================================================================ DONNÉES PAR DÉFAUT */
 const DEFAULT_DATA = {
-  resultats: {
-    tournament:"Tournoi Open du CTRV", date:"2026-03-29", session:"Session matin · 9h–12h", hashtag:"#CTRV2026", footer:"CTRV · Tournoi 2026",
-    matches:[
-      {id:1,category:"SM Senior",time:"09:00",court:"Court 1",isHome:false,p1:{name:"Saury A. 30",club:"TC Les Lilas"},p2:{name:"Tiah Sofiane 30",club:"CT Rose des Vents"},scores:{s1p1:"5",s2p1:"7",s3p1:"10",s1p2:"7",s2p2:"5",s3p2:"5"},winner:1},
-      {id:2,category:"SM Senior",time:"09:00",court:"Court 1",isHome:true,p1:{name:"Souchet R. 15/5",club:"TC Les Lilas"},p2:{name:"Tiah Sofiane 30",club:"CT Rose des Vents"},scores:{s1p1:"5",s2p1:"7",s3p1:"10",s1p2:"7",s2p2:"5",s3p2:"5"},winner:1},
-      {id:3,category:"SD Senior",time:"10:00",court:"Court 4",isHome:false,p1:{name:"Goba A. 15/3",club:"AS Tennis Montreuil"},p2:{name:"Crawford N. 15/3",club:"Montrouge SMTC"},scores:{s1p1:"7",s2p1:"6",s3p1:"",s1p2:"6",s2p2:"2",s3p2:""},winner:1}
-    ]
-  },
-  programme: {
-    tournament:"Tournoi Open du CTRV", date:"2026-03-29", pageNum:"1/4", hashtag:"#CTRV2026",
-    matches:[
-      {id:101,category:"SM Senior",time:"09:00",court:"Court 1",highlight:false,p1:{name:"Saury A.",rank:"30",club:"Tac Tennis"},p2:{name:"Couturier C.",rank:"15/5",club:"Montfermeil Tennis 93"}},
-      {id:102,category:"SM Senior",time:"09:00",court:"Court 2",highlight:true,p1:{name:"Tiah S.",rank:"30",club:"CT Rose des Vents"},p2:{name:"Souchet R.",rank:"15/5",club:"TC Les Lilas"}}
-    ]
-  }
+  resultats:{tournament:"Tournoi Open du CTRV",date:"2026-03-29",session:"Session matin · 9h–12h",hashtag:"#CTRV2026",footer:"CTRV · Tournoi 2026",matches:[
+    {id:1,category:"SM Senior",time:"09:00",court:"Court 1",isHome:false,p1:{name:"Saury A. 30",club:"TC Les Lilas"},p2:{name:"Tiah Sofiane 30",club:"CT Rose des Vents"},scores:{s1p1:"5",s2p1:"7",s3p1:"10",s1p2:"7",s2p2:"5",s3p2:"5"},winner:1}
+  ]},
+  programme:{tournament:"Tournoi Open du CTRV",date:"2026-03-29",pageNum:"1/4",hashtag:"#CTRV2026",matches:[
+    {id:101,category:"SM Senior",time:"09:00",court:"Court 1",highlight:false,p1:{name:"Saury A.",rank:"30",club:"Tac Tennis"},p2:{name:"Couturier C.",rank:"15/5",club:"Montfermeil Tennis 93"}}
+  ]}
 };
 
-/* ================================================================ STATE */
-let data = loadData();
-let activeModule = 'resultats';
-let rEditingId=null, rHomeOn=false, rWinner=1;
-let pEditingId=null, pHighlightOn=false;
+let data=loadData(),activeModule='resultats';
+let rEditingId=null,rHomeOn=false,rWinner=1;
+let pEditingId=null,pHighlightOn=false;
 
-/* ================================================================ PERSISTANCE */
 function loadData(){try{const s=localStorage.getItem('ctrv_v3');return s?JSON.parse(s):JSON.parse(JSON.stringify(DEFAULT_DATA))}catch(e){return JSON.parse(JSON.stringify(DEFAULT_DATA))}}
 function saveData(){localStorage.setItem('ctrv_v3',JSON.stringify(data))}
 
-/* ================================================================ HELPERS */
 function formatDateFR(d){if(!d)return'';const D=['Dimanche','Lundi','Mardi','Mercredi','Jeudi','Vendredi','Samedi'],M=['janvier','février','mars','avril','mai','juin','juillet','août','septembre','octobre','novembre','décembre'],dt=new Date(d+'T12:00:00');return`${D[dt.getDay()]} ${dt.getDate()} ${M[dt.getMonth()]} ${dt.getFullYear()}`}
 function fmtTime(t){return t?t.replace(':','h'):''}
+// Heure complète en un seul bloc ex: "09h30"
 function fmtFull(t){if(!t)return'–';const p=t.split(':');return p[0]+'h'+p[1]}
 function emptyState(msg){return`<div class="empty-state"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" opacity=".2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg><p>${msg}</p></div>`}
 
-/* ================================================================ MODULE SWITCHER */
 function switchModule(mod){
   activeModule=mod;
   ['resultats','programme'].forEach(m=>{
@@ -375,17 +335,14 @@ function switchModule(mod){
   renderPreview();
 }
 
-/* ================================================================ RÉSULTATS — HEADER */
 function renderResultatsHeader(){const r=data.resultats;document.getElementById('r-tournamentName').value=r.tournament||'';document.getElementById('r-matchDate').value=r.date||'';document.getElementById('r-sessionLabel').value=r.session||'';document.getElementById('r-hashtag').value=r.hashtag||'';document.getElementById('r-footerText').value=r.footer||''}
 function saveResultatsHeader(){data.resultats.tournament=document.getElementById('r-tournamentName').value;data.resultats.date=document.getElementById('r-matchDate').value;data.resultats.session=document.getElementById('r-sessionLabel').value;data.resultats.hashtag=document.getElementById('r-hashtag').value;data.resultats.footer=document.getElementById('r-footerText').value;saveData();if(activeModule==='resultats')renderPreview()}
 ['r-tournamentName','r-matchDate','r-sessionLabel','r-hashtag','r-footerText'].forEach(id=>document.getElementById(id).addEventListener('change',saveResultatsHeader));
 
-/* ================================================================ PROGRAMME — HEADER */
 function renderProgrammeHeader(){const p=data.programme;document.getElementById('p-tournamentName').value=p.tournament||'';document.getElementById('p-matchDate').value=p.date||'';document.getElementById('p-pageNum').value=p.pageNum||'';document.getElementById('p-hashtag').value=p.hashtag||''}
 function saveProgrammeHeader(){data.programme.tournament=document.getElementById('p-tournamentName').value;data.programme.date=document.getElementById('p-matchDate').value;data.programme.pageNum=document.getElementById('p-pageNum').value;data.programme.hashtag=document.getElementById('p-hashtag').value;saveData();if(activeModule==='programme')renderPreview()}
 ['p-tournamentName','p-matchDate','p-pageNum','p-hashtag'].forEach(id=>document.getElementById(id).addEventListener('change',saveProgrammeHeader));
 
-/* ================================================================ RÉSULTATS — LISTE */
 function renderResultatsList(){
   const list=document.getElementById('r-matchList'),m=data.resultats.matches;
   document.getElementById('r-match-count').textContent=`(${m.length})`;
@@ -396,7 +353,6 @@ function renderResultatsList(){
   </div>`).join('')
 }
 
-/* ================================================================ RÉSULTATS — MODAL */
 function openResultatModal(id){
   rEditingId=id;document.getElementById('resultatModal').classList.add('open');
   if(id===null){document.getElementById('r-modalTitle').innerHTML='Nouveau <span>résultat</span>';document.getElementById('rf-category').value='SM Senior';document.getElementById('rf-time').value='09:00';document.getElementById('rf-court').value='';document.getElementById('rf-p1name').value='';document.getElementById('rf-p1club').value='';document.getElementById('rf-p2name').value='';document.getElementById('rf-p2club').value='';['rf-s1p1','rf-s2p1','rf-s3p1','rf-s1p2','rf-s2p2','rf-s3p2'].forEach(i=>document.getElementById(i).value='');rHomeOn=false;rWinner=1}
@@ -424,7 +380,6 @@ function saveResultat(){
 }
 function deleteResultat(id){if(!confirm('Supprimer ce résultat ?'))return;data.resultats.matches=data.resultats.matches.filter(m=>m.id!==id);saveData();renderResultatsList();renderPreview();showToast('Supprimé')}
 
-/* ================================================================ PROGRAMME — LISTE */
 function renderProgrammeList(){
   const list=document.getElementById('p-matchList'),m=data.programme.matches;
   document.getElementById('p-match-count').textContent=`(${m.length})`;
@@ -435,7 +390,6 @@ function renderProgrammeList(){
   </div>`).join('')
 }
 
-/* ================================================================ PROGRAMME — MODAL */
 function openProgrammeModal(id){
   pEditingId=id;document.getElementById('programmeModal').classList.add('open');
   if(id===null){document.getElementById('p-modalTitle').innerHTML='Nouveau <span>match</span>';document.getElementById('pf-category').value='SM Senior';document.getElementById('pf-time').value='09:00';document.getElementById('pf-court').value='';document.getElementById('pf-p1name').value='';document.getElementById('pf-p1rank').value='';document.getElementById('pf-p1club').value='';document.getElementById('pf-p2name').value='';document.getElementById('pf-p2rank').value='';document.getElementById('pf-p2club').value='';pHighlightOn=false}
@@ -452,7 +406,6 @@ function saveProgramme(){
 }
 function deleteProgramme(id){if(!confirm('Supprimer ce match ?'))return;data.programme.matches=data.programme.matches.filter(m=>m.id!==id);saveData();renderProgrammeList();renderPreview();showToast('Supprimé')}
 
-/* ================================================================ GENERATE HTML — RÉSULTATS */
 function generateResultatsHTML(){
   const r=data.resultats;
   const chk=`<svg width="14" height="14" viewBox="0 0 16 16" fill="none"><polyline points="3,8 7,12 13,4" stroke="#0d2e42" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
@@ -465,17 +418,14 @@ function generateResultatsHTML(){
   return`<!DOCTYPE html><html lang="fr"><head><meta charset="UTF-8"><meta name="viewport" content="width=1080"><title>Résultats</title><link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800;900&family=Barlow+Condensed:wght@600;700;800;900&display=swap" rel="stylesheet"><style>*{margin:0;padding:0;box-sizing:border-box}body{width:1080px;height:1920px;overflow:hidden;font-family:'Barlow',sans-serif;background:#0d2e42}.story{width:1080px;height:1920px;background:#0d2e42;position:relative;display:flex;flex-direction:column;overflow:hidden}.right-stripe{position:absolute;top:0;right:0;width:10px;height:100%;background:#d1db5e}.deco-circle-1{position:absolute;left:-200px;top:400px;width:600px;height:600px;border-radius:50%;border:1px solid rgba(255,255,255,.03)}.deco-circle-2{position:absolute;right:60px;bottom:-100px;width:400px;height:400px;border-radius:50%;border:40px solid rgba(209,219,94,.04)}.header{position:relative;z-index:10;padding:72px 100px 48px 80px;border-bottom:1px solid rgba(209,219,94,.1);flex-shrink:0}.header-row{display:flex;justify-content:space-between;align-items:flex-start}.header-super{font-size:20px;font-weight:600;letter-spacing:4px;text-transform:uppercase;color:#d1db5e;opacity:.7;margin-bottom:8px}.header-title{font-family:'Barlow Condensed',sans-serif;font-size:96px;font-weight:900;color:#fff;text-transform:uppercase;letter-spacing:2px;line-height:.88}.header-date{font-size:24px;font-weight:500;color:rgba(255,255,255,.3);letter-spacing:2px;text-transform:uppercase;margin-top:14px}.session-badge{display:inline-block;margin-top:16px;background:rgba(209,219,94,.12);border:1.5px solid rgba(209,219,94,.3);border-radius:40px;padding:8px 28px;font-size:20px;font-weight:700;color:#d1db5e;letter-spacing:3px;text-transform:uppercase}.logo-zone{width:300px;height:300px;display:flex;align-items:center;justify-content:center;flex-shrink:0}.logo-zone img{max-width:100%;max-height:100%;object-fit:contain;transform:scale(2.0)}.results-list{position:relative;z-index:10;flex:1;padding:28px 80px 20px 80px;display:flex;flex-direction:column;gap:10px;overflow:hidden}.result-card{background:rgba(255,255,255,.04);border:.5px solid rgba(255,255,255,.07);border-radius:14px;padding:16px 26px;display:flex;flex-direction:column}.result-card.home{background:rgba(209,219,94,.07);border:.5px solid rgba(209,219,94,.2);border-left:4px solid #d1db5e}.result-meta{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}.round-tag{font-size:15px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:rgba(209,219,94,.5)}.result-card.home .round-tag{color:#d1db5e}.time-court-tag{font-size:15px;font-weight:500;color:rgba(255,255,255,.2);letter-spacing:1px}.match-grid{display:grid;grid-template-columns:28px 1fr 45px 45px 45px;align-items:center;row-gap:12px;column-gap:12px;padding-top:4px}.player-icon{width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center}.player-icon.win{background:#d1db5e}.player-icon.lose{background:transparent}.player-info{display:flex;flex-direction:column;justify-content:center}.player-name{font-family:'Barlow Condensed',sans-serif;font-size:44px;font-weight:900;text-transform:uppercase;letter-spacing:1px;line-height:.92}.player-club{font-size:15px;font-weight:500;color:rgba(255,255,255,.28);letter-spacing:1px;text-transform:uppercase;margin-top:2px}.score-cell{font-family:'Barlow Condensed',sans-serif;font-size:40px;font-weight:900;text-align:center;line-height:1}.win .player-name{color:#fff}.win.score-cell{color:#d1db5e}.lose .player-name{color:rgba(255,255,255,.4)}.lose.score-cell{color:rgba(255,255,255,.3)}.footer{position:relative;z-index:10;background:rgba(0,0,0,.2);padding:18px 100px 34px 80px;display:flex;justify-content:space-between;align-items:center;flex-shrink:0;margin-top:auto}.footer-tournament{font-size:20px;font-weight:600;color:rgba(255,255,255,.3);letter-spacing:1px;text-transform:uppercase}.footer-hashtag{font-size:20px;font-weight:700;color:rgba(209,219,94,.6);letter-spacing:1px}</style></head><body><div class="story"><div class="right-stripe"></div><div class="deco-circle-1"></div><div class="deco-circle-2"></div><div class="header"><div class="header-row"><div><div class="header-super">${r.tournament}</div><div class="header-title">Résultats<br>du jour</div><div class="header-date">${formatDateFR(r.date)}</div><div class="session-badge">${r.session}</div></div><div class="logo-zone"><img src="logoctrv.png" alt="Logo CTRV"></div></div></div><div class="results-list">${mHTML}</div><div class="footer"><div class="footer-tournament">${r.footer}</div><div class="footer-hashtag">${r.hashtag}</div></div></div></body></html>`
 }
 
-/* ================================================================ GENERATE HTML — PROGRAMME */
 function generateProgrammeHTML(){
   const p=data.programme;
-  const mHTML=p.matches.map(m=>{const t=fmtHhMm(m.time);return`<div class="match-card"><div class="match-time-block"><div class="match-time">${t.h}</div><div class="match-ampm">${fmtFull(m.time)}</div></div><div class="match-sep"></div><div class="match-players"><div class="match-p1-block${m.highlight?' highlight-club':''}"><div class="match-p1">${m.p1.name} <span class="player-rank">${m.p1.rank}</span></div><div class="player-club">${m.p1.club}</div></div><div class="match-vs-label">vs</div><div class="match-p1-block"><div class="match-p1">${m.p2.name} <span class="player-rank">${m.p2.rank}</span></div><div class="player-club">${m.p2.club}</div></div></div><div class="match-meta"><div class="court-tag">${m.court}</div><div class="round-tag-small">${m.category}</div></div></div>`}).join('');
-  return`<!DOCTYPE html><html lang="fr"><head><meta charset="UTF-8"><meta name="viewport" content="width=1080"><title>Programme</title><link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@400;500;600;700;800;900&family=Barlow+Condensed:wght@600;700;800;900&display=swap" rel="stylesheet"><style>*{margin:0;padding:0;box-sizing:border-box}body{width:1080px;height:1920px;overflow:hidden;font-family:'Barlow',sans-serif;background:#f0f0e8}.story{width:1080px;height:1920px;background:#f0f0e8;position:relative;display:flex;flex-direction:column;overflow:hidden}.header-block{background:#184f71;padding:72px 80px 56px;position:relative;flex-shrink:0;overflow:hidden}.header-deco{position:absolute;right:-80px;bottom:-100px;width:340px;height:340px;border-radius:50%;border:2px solid rgba(209,219,94,.1)}.header-deco-2{position:absolute;right:60px;top:-60px;width:200px;height:200px;border-radius:50%;background:rgba(209,219,94,.04)}.header-top{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:32px;position:relative;z-index:2}.super-label{font-size:20px;font-weight:600;letter-spacing:4px;text-transform:uppercase;color:#d1db5e;opacity:.8;margin-bottom:10px}.main-title{font-family:'Barlow Condensed',sans-serif;font-size:100px;font-weight:900;color:#fff;text-transform:uppercase;letter-spacing:2px;line-height:.88}.logo-zone{width:300px;height:300px;display:flex;align-items:center;justify-content:center;flex-shrink:0}.logo-zone img{max-width:100%;max-height:100%;object-fit:contain;transform:scale(2.5)}.date-stripe{background:#d1db5e;padding:20px 80px;display:flex;justify-content:space-between;align-items:center;flex-shrink:0}.date-stripe-day{font-family:'Barlow Condensed',sans-serif;font-size:42px;font-weight:900;color:#0d2e42;text-transform:uppercase;letter-spacing:2px}.court-section{padding:36px 80px 0;flex-shrink:0}.court-section-header{display:flex;align-items:center;gap:20px}.court-icon{width:40px;height:40px;border-radius:8px;background:rgba(24,79,113,.1);display:flex;align-items:center;justify-content:center}.court-section-title{font-size:20px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:#184f71;opacity:.45}.court-section-line{flex:1;height:1px;background:rgba(24,79,113,.1)}.matches-list{flex:1;padding:24px 80px;display:flex;flex-direction:column;gap:16px;overflow:hidden}.match-card{background:#fff;border-radius:16px;padding:24px 32px;display:flex;align-items:center;gap:24px;border:1px solid rgba(24,79,113,.07)}.match-time-block{min-width:100px;text-align:center}.match-time{font-family:'Barlow Condensed',sans-serif;font-size:52px;font-weight:900;color:#184f71;letter-spacing:1px;line-height:.9}.match-sep{width:1px;height:64px;background:rgba(24,79,113,.1);flex-shrink:0}.match-players{flex:1}.match-p1-block{display:flex;flex-direction:column;gap:4px}.highlight-club{border:3px solid #d1db5e;border-radius:8px;padding:8px 12px;margin-left:-12px;background-color:rgba(209,219,94,.08)}.match-p1{font-size:26px;font-weight:800;color:#1a1a1a;text-transform:uppercase;letter-spacing:.5px;line-height:1.1;display:flex;align-items:center}.player-rank{font-size:16px;font-weight:700;color:#184f71;background:rgba(24,79,113,.08);padding:2px 8px;border-radius:4px;margin-left:12px}.player-club{font-size:15px;font-weight:500;color:rgba(24,79,113,.6);text-transform:uppercase}.match-vs-label{font-size:14px;font-weight:600;color:rgba(0,0,0,.2);letter-spacing:2px;text-transform:uppercase;margin:6px 0}.match-meta{display:flex;flex-direction:column;align-items:flex-end;gap:8px}.court-tag{font-size:18px;font-weight:800;color:#184f71;background:rgba(24,79,113,.08);padding:6px 16px;border-radius:6px;letter-spacing:1px;text-transform:uppercase}.round-tag-small{font-size:14px;font-weight:600;color:rgba(24,79,113,.4);letter-spacing:1px;text-transform:uppercase}.footer{background:#0d2e42;padding:28px 80px;display:flex;justify-content:flex-end;align-items:center;flex-shrink:0}.footer-hashtag{font-size:20px;font-weight:700;color:#d1db5e;letter-spacing:1px}</style></head><body><div class="story"><div class="header-block"><div class="header-deco"></div><div class="header-deco-2"></div><div class="header-top"><div class="header-titles"><div class="super-label">${p.tournament}</div><div class="main-title">Programme<br>du jour</div></div><div class="logo-zone"><img src="logoctrv.png" alt="Logo CTRV"></div></div></div><div class="date-stripe"><div class="date-stripe-day">${formatDateFR(p.date)}</div></div><div class="court-section"><div class="court-section-header"><div class="court-icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><rect x="2" y="2" width="16" height="16" stroke="#184f71" stroke-width="1.5" rx="1"/><line x1="10" y1="2" x2="10" y2="18" stroke="#184f71" stroke-width="1"/><line x1="2" y1="10" x2="18" y2="10" stroke="#184f71" stroke-width="1"/></svg></div><div class="court-section-title">Matchs du jour (${p.pageNum})</div><div class="court-section-line"></div></div></div><div class="matches-list">${mHTML}</div><div class="footer"><div class="footer-hashtag">${p.hashtag}</div></div></div></body></html>`
+  const mHTML=p.matches.map(m=>`<div class="match-card"><div class="match-time-block"><div class="match-time">${fmtFull(m.time)}</div></div><div class="match-sep"></div><div class="match-players"><div class="match-p1-block${m.highlight?' highlight-club':''}"><div class="match-p1">${m.p1.name} <span class="player-rank">${m.p1.rank}</span></div><div class="player-club">${m.p1.club}</div></div><div class="match-vs-label">vs</div><div class="match-p1-block"><div class="match-p1">${m.p2.name} <span class="player-rank">${m.p2.rank}</span></div><div class="player-club">${m.p2.club}</div></div></div><div class="match-meta"><div class="court-tag">${m.court}</div><div class="round-tag-small">${m.category}</div></div></div>`).join('');
+  return`<!DOCTYPE html><html lang="fr"><head><meta charset="UTF-8"><meta name="viewport" content="width=1080"><title>Programme</title><link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@400;500;600;700;800;900&family=Barlow+Condensed:wght@600;700;800;900&display=swap" rel="stylesheet"><style>*{margin:0;padding:0;box-sizing:border-box}body{width:1080px;height:1920px;overflow:hidden;font-family:'Barlow',sans-serif;background:#f0f0e8}.story{width:1080px;height:1920px;background:#f0f0e8;position:relative;display:flex;flex-direction:column;overflow:hidden}.header-block{background:#184f71;padding:72px 80px 56px;position:relative;flex-shrink:0;overflow:hidden}.header-deco{position:absolute;right:-80px;bottom:-100px;width:340px;height:340px;border-radius:50%;border:2px solid rgba(209,219,94,.1)}.header-deco-2{position:absolute;right:60px;top:-60px;width:200px;height:200px;border-radius:50%;background:rgba(209,219,94,.04)}.header-top{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:32px;position:relative;z-index:2}.super-label{font-size:20px;font-weight:600;letter-spacing:4px;text-transform:uppercase;color:#d1db5e;opacity:.8;margin-bottom:10px}.main-title{font-family:'Barlow Condensed',sans-serif;font-size:100px;font-weight:900;color:#fff;text-transform:uppercase;letter-spacing:2px;line-height:.88}.logo-zone{width:300px;height:300px;display:flex;align-items:center;justify-content:center;flex-shrink:0}.logo-zone img{max-width:100%;max-height:100%;object-fit:contain;transform:scale(2.5)}.date-stripe{background:#d1db5e;padding:20px 80px;display:flex;align-items:center;flex-shrink:0}.date-stripe-day{font-family:'Barlow Condensed',sans-serif;font-size:42px;font-weight:900;color:#0d2e42;text-transform:uppercase;letter-spacing:2px}.court-section{padding:36px 80px 0;flex-shrink:0}.court-section-header{display:flex;align-items:center;gap:20px}.court-icon{width:40px;height:40px;border-radius:8px;background:rgba(24,79,113,.1);display:flex;align-items:center;justify-content:center}.court-section-title{font-size:20px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:#184f71;opacity:.45}.court-section-line{flex:1;height:1px;background:rgba(24,79,113,.1)}.matches-list{flex:1;padding:24px 80px;display:flex;flex-direction:column;gap:16px;overflow:hidden}.match-card{background:#fff;border-radius:16px;padding:24px 32px;display:flex;align-items:center;gap:24px;border:1px solid rgba(24,79,113,.07)}.match-time-block{min-width:110px;text-align:center}.match-time{font-family:'Barlow Condensed',sans-serif;font-size:52px;font-weight:900;color:#184f71;letter-spacing:1px;line-height:1}.match-sep{width:1px;height:64px;background:rgba(24,79,113,.1);flex-shrink:0}.match-players{flex:1}.match-p1-block{display:flex;flex-direction:column;gap:4px}.highlight-club{border:3px solid #d1db5e;border-radius:8px;padding:8px 12px;margin-left:-12px;background-color:rgba(209,219,94,.08)}.match-p1{font-size:26px;font-weight:800;color:#1a1a1a;text-transform:uppercase;letter-spacing:.5px;line-height:1.1;display:flex;align-items:center}.player-rank{font-size:16px;font-weight:700;color:#184f71;background:rgba(24,79,113,.08);padding:2px 8px;border-radius:4px;margin-left:12px}.player-club{font-size:15px;font-weight:500;color:rgba(24,79,113,.6);text-transform:uppercase}.match-vs-label{font-size:14px;font-weight:600;color:rgba(0,0,0,.2);letter-spacing:2px;text-transform:uppercase;margin:6px 0}.match-meta{display:flex;flex-direction:column;align-items:flex-end;gap:8px}.court-tag{font-size:18px;font-weight:800;color:#184f71;background:rgba(24,79,113,.08);padding:6px 16px;border-radius:6px;letter-spacing:1px;text-transform:uppercase}.round-tag-small{font-size:14px;font-weight:600;color:rgba(24,79,113,.4);letter-spacing:1px;text-transform:uppercase}.footer{background:#0d2e42;padding:28px 80px;display:flex;justify-content:flex-end;align-items:center;flex-shrink:0}.footer-hashtag{font-size:20px;font-weight:700;color:#d1db5e;letter-spacing:1px}</style></head><body><div class="story"><div class="header-block"><div class="header-deco"></div><div class="header-deco-2"></div><div class="header-top"><div class="header-titles"><div class="super-label">${p.tournament}</div><div class="main-title">Programme<br>du jour</div></div><div class="logo-zone"><img src="logoctrv.png" alt="Logo CTRV"></div></div></div><div class="date-stripe"><div class="date-stripe-day">${formatDateFR(p.date)}</div></div><div class="court-section"><div class="court-section-header"><div class="court-icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><rect x="2" y="2" width="16" height="16" stroke="#184f71" stroke-width="1.5" rx="1"/><line x1="10" y1="2" x2="10" y2="18" stroke="#184f71" stroke-width="1"/><line x1="2" y1="10" x2="18" y2="10" stroke="#184f71" stroke-width="1"/></svg></div><div class="court-section-title">Matchs du jour (${p.pageNum})</div><div class="court-section-line"></div></div></div><div class="matches-list">${mHTML}</div><div class="footer"><div class="footer-hashtag">${p.hashtag}</div></div></div></body></html>`
 }
 
-/* ================================================================ DISPATCH */
 function generateHTML(){return activeModule==='resultats'?generateResultatsHTML():generateProgrammeHTML()}
 
-/* ================================================================ PREVIEW */
 function renderPreview(){
   renderResultatsList();renderProgrammeList();
   const html=generateHTML(),frame=document.getElementById('preview-frame');
@@ -490,7 +440,6 @@ function scalePreview(){
 }
 window.addEventListener('resize',scalePreview);
 
-/* ================================================================ EXPORT HTML */
 function exportHTML(){
   const prefix=activeModule==='resultats'?'resultats':'programme';
   const date=activeModule==='resultats'?data.resultats.date:data.programme.date;
@@ -498,7 +447,6 @@ function exportHTML(){
   const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download=`${prefix}_${date||'ctrv'}.html`;a.click();showToast('HTML exporté !')
 }
 
-/* ================================================================ EXPORT PNG */
 function exportPNG(){
   const btn=document.getElementById('btnExportPNG');btn.textContent='⏳ Génération…';btn.disabled=true;
   const container=document.createElement('div');container.style.cssText='position:fixed;left:-9999px;top:0;width:1080px;height:1920px;overflow:hidden;z-index:-1;';
@@ -518,19 +466,15 @@ function exportPNG(){
   })
 }
 
-/* ================================================================ IMPORT / EXPORT JSON */
 function exportData(){const blob=new Blob([JSON.stringify(data,null,2)],{type:'application/json'});const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download=`ctrv_data_${data.resultats.date||'backup'}.json`;a.click();showToast('JSON exporté !')}
 function importData(){document.getElementById('jsonImportInput').click()}
 function handleJSONImport(e){const f=e.target.files[0];if(!f)return;const r=new FileReader();r.onload=(ev)=>{try{data=JSON.parse(ev.target.result);saveData();renderResultatsHeader();renderProgrammeHeader();renderResultatsList();renderProgrammeList();renderPreview();showToast('Données importées !')}catch(err){alert('Fichier JSON invalide.')}};r.readAsText(f);e.target.value=''}
 
-/* ================================================================ TOAST */
 function showToast(msg){const t=document.getElementById('toast');document.getElementById('toast-msg').textContent=msg;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2800)}
 
-/* ================================================================ CLOSE MODALS */
 document.getElementById('resultatModal').addEventListener('click',function(e){if(e.target===this)closeResultatModal()});
 document.getElementById('programmeModal').addEventListener('click',function(e){if(e.target===this)closeProgrammeModal()});
 
-/* ================================================================ INIT */
 function init(){renderResultatsHeader();renderProgrammeHeader();renderResultatsList();renderProgrammeList();renderPreview();setTimeout(scalePreview,100)}
 init();
 </script>
